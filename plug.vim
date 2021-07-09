@@ -5,6 +5,8 @@ endif
 call plug#begin()
 
 Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'junegunn/gv.vim'
 Plug 'tpope/vim-rhubarb'
 Plug 'cohama/lexima.vim'
 Plug 'rbong/vim-flog'
