@@ -324,4 +324,24 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 hi CocErrorSign guibg=red guifg=#ffffff
 hi CocWarningSign guibg=yellow guifg=black
 hi CocInfoSign guibg=green guifg=#ffffff
+
+
+" Integration with lightline
+
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
+
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \   'currentfunction': 'CocCurrentFunction'
+      \ },
+      \ }
+
 " vim: set foldmethod=marker foldlevel=0:

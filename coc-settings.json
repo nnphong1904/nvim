@@ -39,7 +39,7 @@
   "eslint.format.enable": true,
   "eslint.autoFixOnSave": true,
   "diagnostic.enableHighlightLineNumber": true,
-  "coc.preferences.jumpCommand": "vsplit",
+  "coc.preferences.jumpCommand": "edit",
   "diagnostic.warningSign": "**",
   "diagnostic.infoSign": "##",
   "coc.preferences.colorSupport": true,
