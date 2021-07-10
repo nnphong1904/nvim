@@ -324,9 +324,10 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 hi CocErrorSign guibg=red guifg=#ffffff
 hi CocWarningSign guibg=yellow guifg=black
 hi CocInfoSign guibg=green guifg=#ffffff
-
+hi CocHighlightText guibg=#444B6A guifg=#ffffff
 
 " Integration with lightline
+let g:rainbow_active = 1
 
 function! CocCurrentFunction()
     return get(b:, 'coc_current_function', '')
@@ -336,12 +337,21 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'cocstatus','gitbranch', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
-      \   'currentfunction': 'CocCurrentFunction'
+      \   'currentfunction': 'CocCurrentFunction',
+      \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.erb,*.jsx,*.tsx"
 
+let g:closetag_regions =  {
+\ 'typescript.tsx': 'jsxRegion,tsxRegion',
+\ 'javascript.jsx': 'jsxRegion',
+\ }
+inoremap <S-Tab> <esc>la
+vnoremap <S-Tab> <esc>la
+nnoremap <S-Tab> <esc>la
 " vim: set foldmethod=marker foldlevel=0:

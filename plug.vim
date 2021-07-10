@@ -27,6 +27,10 @@ if has("nvim")
   Plug 'milch/vim-fastlane'
   Plug 'vim-ruby/vim-ruby'
   Plug 'itchyny/lightline.vim'
+  Plug 'luochen1990/rainbow'
+  Plug 'AndrewRadev/tagalong.vim'
+  Plug 'alvan/vim-closetag'
+  Plug 'terryma/vim-multiple-cursors'
 
 endif
 
